@@ -17,7 +17,7 @@
     </nav>
     </header>
 
-    <form method="POST" action="repuesta.html">
+    <form method="post" action="repuesta.html">
     
         <fieldset>
             <legend>Datos personales</legend>
@@ -26,10 +26,10 @@
             <input type="text" id="nombre" name="nombre" required><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" id="email" name="email" required><br><br>
 
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password"><br><br>
+            <input type="password" id="password" name="password" required><br><br>
 
         </fieldset>
 
@@ -63,11 +63,11 @@
             <legend>Mensaje</legend>
 
             <label for="mensaje">Comentario:</label><br>
-            <textarea id="mensaje" name="mensaje"></textarea>
+            <textarea id="mensaje" name="mensaje" required></textarea>
         </fieldset>
 
         <br>
-        <button type="submit">Enviar</button>
+        <input type="submit" value="Enviar">
         <button type="reset">Resetear</button>
     </form>
     
