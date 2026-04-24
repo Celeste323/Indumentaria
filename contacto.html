@@ -6,6 +6,73 @@
     <title>Contacto</title>
 </head>
 <body>
-    <h1>Contactos</h1>
+    <header>
+        <h1> Contacto EABMODEL</h1>
+        <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <form method="POST" action="">
+
+    <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferencias</legend>
+
+        <label>Tipo de ropa:</label><br>
+        <input type="radio" id="formal" name="ropa" value="formal">
+        <label for="formal">Formal</label><br>
+
+        <input type="radio" id="casual" name="ropa" value="casual">
+        <label for="casual">Casual</label><br><br>
+
+        <label>Intereses:</label><br>
+        <input type="checkbox" id="moda" name="interes" value="moda">
+        <label for="moda">Moda</label><br>
+
+        <input type="checkbox" id="tendencias" name="interes" value="tendencias">
+        <label for="tendencias">Tendencias</label><br><br>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option>Argentina</option>
+            <option>Chile</option>
+            <option>Uruguay</option>
+        </select>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Mensaje</legend>
+
+        <label for="mensaje">Comentario:</label><br>
+        <textarea id="mensaje" name="mensaje"></textarea>
+    </fieldset>
+
+    <br>
+    <button type="submit">Enviar</button>
+    <button type="reset">Resetear</button>
+    </form>
+    
+    <footer>
+        <p>&copy; 2026 EABMODEL | Desarrollado por Celeste y Braian &mdash; Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
