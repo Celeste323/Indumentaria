@@ -1,4 +1,4 @@
-/* ===== ESTILOS GENERALES ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+
 header {
     background-color: #887675;
     color: white;
@@ -38,7 +38,7 @@ header p {
     margin-bottom: 20px;
 }
 
-/* ===== NAVBAR ===== */
+
 nav ul {
     list-style: none;
 }
@@ -62,13 +62,13 @@ nav ul li a:hover {
     color: #6a2941;
 }
 
-/* ===== MAIN ===== */
+
 main {
     width: 85%;
     margin: 30px auto;
 }
 
-/* ===== SECCIONES ===== */
+
 section {
     background-color: white;
     padding: 25px;
@@ -94,7 +94,7 @@ section p {
     margin-bottom: 10px;
 }
 
-/* ===== ARTÍCULOS ===== */
+
 article {
     background-color: #f4f4f4;
     padding: 15px;
@@ -108,7 +108,7 @@ article:hover {
     background-color: #ececec;
 }
 
-/* ===== LISTAS ===== */
+
 ul {
     margin-left: 20px;
     margin-top: 10px;
@@ -118,7 +118,7 @@ ul li {
     margin-bottom: 8px;
 }
 
-/* ===== LINKS ===== */
+
 a {
     color: #000;
     font-weight: bold;
@@ -129,7 +129,7 @@ a:hover {
     color: #555;
 }
 
-/* ===== HR ===== */
+
 hr {
     border: none;
     height: 2px;
@@ -138,7 +138,7 @@ hr {
     margin: 20px auto;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
     background-color: #1f1f1f;
     color: white;
@@ -147,7 +147,7 @@ footer {
     font-size: 14px;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
 
     header h1 {
