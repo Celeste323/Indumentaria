@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto | EABMODEL</title>
 </head>
 <body>
-    <header>
-        <h1> Contacto EABMODEL</h1>
-        <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="info.html">Info</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <img src="Imagenes/Logo_EABMODEL.jpeg" alt="Logo EABMODEL" width="230" height="200">
+        <h1>Contacto EABMODEL</h1>
+        <p><em>Contactanos</em></p>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <form method="post" action="repuesta.html">
+    <main class="main">
+    <form class="formulario-contacto" method="post" action="repuesta.html">
     
-        <fieldset>
+        <fieldset class="datos">
             <legend>Datos personales</legend>
 
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+            <input type="text" id="nombre" name="nombre" required>
 
             <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required><br><br>
+            <input type="text" id="telefono" name="telefono" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email">
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="preferencias">
             <legend>Preferencias</legend>
 
             <label>Tipo de ropa:</label><br>
@@ -41,14 +45,14 @@
             <label for="formal">Formal</label><br>
 
             <input type="radio" id="casual" name="ropa" value="casual">
-            <label for="casual">Casual</label><br><br>
+            <label for="casual">Casual</label>
 
             <label>Intereses:</label><br>
             <input type="checkbox" id="moda" name="interes" value="moda">
             <label for="moda">Moda</label><br>
 
             <input type="checkbox" id="tendencias" name="interes" value="tendencias">
-            <label for="tendencias">Tendencias</label><br><br>
+            <label for="tendencias">Tendencias</label>
 
             <label for="pais">País:</label>
             <select id="pais" name="pais">
@@ -59,19 +63,21 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="mensaje">
             <legend>Mensaje</legend>
 
             <label for="mensaje">Comentario:</label><br>
             <textarea id="mensaje" name="mensaje" required></textarea>
         </fieldset>
 
-        <br>
-        <input type="submit" value="Enviar">
-        <button type="reset">Resetear</button>
+        <div class="form-botones">
+            <input type="submit" class="btn_enviar" value="Enviar">
+            <button class="btn_reset" type="reset">Resetear</button>
+        </div>
     </form>
+    </main>
     
-    <footer>
+    <footer class="footer">
         <p>&copy; 2026 EABMODEL | Desarrollado por Celeste y Braian &mdash; Todos los derechos reservados.</p>
     </footer>
 </body>
