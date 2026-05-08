@@ -1,0 +1,278 @@
+
+:root {
+    --rojo-oscuro:    #8B0000;
+    --rojo-principal: #C0392B;
+    --rojo-vivo:      #E74C3C;
+    --rojo-claro:     #FF6B6B;
+    --negro:          #111111;
+    --gris-oscuro:    #1E1E1E;
+    --gris-medio:     #2C2C2C;
+    --gris-claro:     #F5F5F5;
+    --blanco:         #FFFFFF;
+    --sombra:         0 4px 20px rgba(216, 5, 5, 0.25);
+    --transicion:     0.3s ease; /* hace que la transición sea suave y tenga una duración de 0.3s*/
+}
+
+/* ---------- Reset---------- */
+* {
+    box-sizing: border-box;
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Define la fuente por defecto*/
+    background-color: var(--blanco); /* color de fondo de toda la página*/
+    color: var(--negro); /* color del texto*/
+    line-height: 1.7; /* espacio entre líneas*/
+    min-height: 100vh; /* altura minima de la página*/
+    display: flex; /* Los elementos van en fila*/
+    flex-direction: column; /* Los elementos van en columna*/
+}
+
+/* Separadores hr */
+hr {
+    border: none; /* elimina el borde por defecto*/
+    border-top: 2px solid var(--rojo-principal); /* color y grosor del borde*/
+    margin: 0; /* elimina el margen por defecto*/
+}
+
+.header {
+    background: linear-gradient(135deg, var(--rojo-oscuro) 0%, var(--gris-oscuro) 60%);/*Gradient es una transicion entre dos colores*/
+    display: flex; /* Los elementos van en fila*/
+    justify-content: space-between; /*Los elementos se separan*/
+    align-items: center; /* Los elementos se alinean al centro*/
+    padding: 18px 48px; /* 18px arriba y abajo, 48px izquierda y derecha*/
+    box-shadow: var(--sombra); /* Sombra del header*/
+    position: sticky; /* Hace que el header se quede en la parte superior al hacer scroll*/
+    top: 0; /* Distancia del header al tope*/
+    z-index: 100; /* Orden de las capas*/
+    border-bottom: 3px solid var(--rojo-vivo); /* Borde inferior*/
+}
+
+/* Logo + texto */
+.logo_texto {
+    display: flex; /* Establece el modelo de caja flex*/
+    align-items: center; /*Alinea los elementos verticalmente*/
+    gap: 20px; /* Espacio entre elementos*/
+}
+
+/* Logo */
+.header img {
+    width: 230px; /*Tamaño del logo*/
+    height: 150px;/*Tamaño del logo*/
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor*/
+    border-radius: 10%; /*Redondea los bordes del logo*/
+    border: 2px solid var(--rojo-vivo);/*Borde del logo*/
+    box-shadow: 0 0 18px rgba(231, 76, 60, 0.55);/*Sombra del logo*/
+    transition: transform var(--transicion), box-shadow var(--transicion);/* Transición del logo*/
+}
+
+.header img:hover {
+    transform: scale(1.07);/* Escala el logo al pasar el mouse*/
+    box-shadow: 0 0 28px rgba(231, 76, 60, 0.85);/* Sombra del logo al pasar el mouse*/
+}
+
+/* Texto */
+.header_info {
+    display: flex; /* Establece el modelo de caja flex*/
+    flex-direction: column; /* Establece la dirección de los elementos*/
+    justify-content: center; /*Justifica los elementos verticalmente*/
+}
+
+.header_info h1 {
+    font-size: 2rem; /* Tamaño del título*/
+    font-weight: 900; /* Grosor del título*/
+    letter-spacing: 3px; /* Espacio entre letras*/
+    color: var(--blanco); /* Color del título*/
+    text-transform: uppercase; /* Mayúsculas*/
+    text-shadow: 0 2px 10px rgba(231, 76, 60, 0.6); /* Sombra del título*/
+}
+
+.header_info p em {
+    font-size: 1rem;/* Tamaño del párrafo*/
+    color: var(--rojo-claro);/* Color del párrafo*/
+    font-style: italic;/* Cursiva*/
+}
+
+/* NAV */
+.nav {
+    flex: 1; /* Ocupa todo el espacio disponible*/
+    display: flex; /* Establece el modelo de caja flex*/
+    justify-content: center; /*Centra los elementos horizontalmente*/
+}
+
+.nav ul {
+    list-style: none; /* Elimina la viñeta*/
+    display: flex; /* Establece el modelo de caja flex*/
+    gap: 18px; /* Espacio entre elementos*/
+    align-items: center; /*Alinea los elementos verticalmente*/
+}
+
+.nav ul li a {
+    color: var(--blanco); /* Color del texto*/
+    text-decoration: none; /* Elimina el subrayado*/
+    font-weight: 600; /* Grosor del texto*/
+    font-size: 1rem; /* Tamaño del texto*/
+    letter-spacing: 1px; /* Espacio entre letras*/
+    padding: 8px 20px; /* Padding del botón*/
+    border-radius: 30px; /* Redondea los bordes*/
+    border: 2px solid transparent; /* Borde transparente*/
+    background-color: rgba(231, 76, 60, 0.15);/* Color de fondo*/
+    transition: background-color var(--transicion),/* Transición del botón*/
+                border-color var(--transicion),/* Transición del botón*/
+                transform var(--transicion);/* Transición del botón*/
+}
+
+.nav ul li a:hover {
+    background-color: var(--rojo-vivo);
+    border-color: var(--rojo-claro);
+    transform: translateY(-2px);
+}
+
+/*MAIN*/
+
+.main {
+    flex: 1; /* El main ocupa todo el espacio disponible*/
+    max-width: 1100px;/* Ancho máximo del main*/
+    width: 100%;/* Ancho del main*/
+    margin: 48px auto;/* Margen del main*/
+    padding: 0 32px;/* Padding del main*/
+    display: flex; /* Establece el modelo de caja flex*/
+    flex-direction: column; /* Establece la dirección de los elementos*/
+    gap: 48px; /* Espacio entre los elementos*/
+}
+
+/* SECCIONES GENERALES*/
+
+.main section {
+    background: var(--blanco); /* Color de fondo*/
+    border-radius: 12px; /* Redondea los bordes*/
+    padding: 36px 40px; /* Padding del contenido*/
+    border-left: 5px solid var(--rojo-vivo); /* Borde izquierdo*/
+    box-shadow: var(--sombra); /* Sombra del contenido*/
+    transition: transform var(--transicion) /* Transición del contenido*/
+}
+
+.main section:hover {
+    transform: translateY(-3px); /* Efecto de elevación al pasar el mouse*/
+}
+
+/* ---------- Títulos ---------- */
+
+h1 { font-size: 2rem; /* Tamaño del título*/ }
+
+h2 {
+    font-size: 1.55rem;/* Tamaño del título*/
+    font-weight: 700;/* Grosor del título*/
+    color: var(--rojo-claro);/* Color del título*/
+    margin-bottom: 14px;/* Margen inferior*/
+    padding-bottom: 8px;/* Padding inferior*/
+    border-bottom: 2px solid var(--rojo-oscuro);/* Borde inferior*/
+    letter-spacing: 1px;/* Espacio entre letras*/
+    text-transform: uppercase;/* Mayúsculas*/
+}
+
+h3 {
+    font-size: 1.15rem;/* Tamaño del título*/
+    font-weight: 600;/* Grosor del título*/
+    color: var(--rojo-vivo);/* Color del título*/
+    margin: 16px 0 8px;/* Margen del título*/
+}
+
+p {
+    color: var(--negro);/* Color del texto*/
+    font-size: 1rem;/* Tamaño del texto*/
+    margin-bottom: 10px;/* Margen inferior*/
+}
+
+/* ---------- Links dentro del contenido ---------- */
+a {
+    color: var(--rojo-claro);/* Color del link*/
+    text-decoration: none;/* Elimina el subrayado*/
+    font-weight: 600;/* Grosor del link*/
+    transition: color var(--transicion);/* Transición del link*/
+}
+
+a:hover {
+    color: var(--rojo-oscuro);/* Color del link*/
+    text-decoration: underline;/* Subrayado*/
+}
+
+/* INDEX — Sección Bienvenida */
+
+.bienvenida p {
+    font-size: 1.05rem;/* Tamaño del texto*/
+    line-height: 1.85;/* Espaciado entre líneas*/   
+}
+
+.bienvenida strong {
+    color: var(--rojo-vivo);/* Color del link*/
+}
+
+/* INDEX — Sección Categorías */
+
+.categorias {
+    display: flex;/* Establece el modelo de caja flex*/
+    flex-direction: column;/* Establece la dirección de los elementos*/
+    gap: 0;/* Espacio entre elementos*/
+}
+
+.categorias > div,  
+.categorias article {
+    background: rgba(139, 0, 0, 0.15);/* Color de fondo*/
+    border-radius: 8px;/* Redondea los bordes*/
+    padding: 18px 22px;/* Padding del contenido*/
+    margin-top: 14px;/* Margen superior*/
+    border: 1px solid rgba(231, 76, 60, 0.25);/* Borde del contenido*/
+    transition: background-color var(--transicion), border-color var(--transicion);/* Transición del contenido*/
+}
+
+.categorias article:hover {
+    background-color: rgba(192, 57, 43, 0.2);/* Color de fondo*/
+    border-color: var(--rojo-vivo);/* Color del borde*/
+}
+
+.categorias article h3 {
+    margin-top: 0;/* Margen superior*/
+}
+
+/* INDEX — Sección Tendencias */
+
+.tendencias ul {
+    list-style: none;/* Elimina la viñeta*/
+    padding: 0;/* Padding del contenido*/
+    margin: 14px 0;/* Margen del contenido*/
+    display: flex;/* Establece el modelo de caja flex*/
+    flex-direction: column;/* Establece la dirección de los elementos*/
+    gap: 10px;/* Espacio entre elementos*/
+}
+
+.tendencias ul li {
+    padding: 10px 18px;/* Padding del contenido*/
+    background: rgba(139, 0, 0, 0.08);/* Color de fondo*/
+    border-radius: 6px;/* Redondea los bordes*/
+    border-left: 4px solid var(--rojo-vivo);/* Borde izquierdo*/
+    color: var(--negro);/* Color del texto*/
+    font-size: 0.97rem;/* Tamaño del texto*/
+    transition: background-color var(--transicion);/* Transición del contenido*/
+}
+
+.tendencias ul li:hover {
+    background-color: rgba(231, 76, 60, 0.2);/* Color de fondo*/
+}
+
+/*FOOTER*/
+.footer {
+    background: linear-gradient(90deg, var(--rojo-oscuro), var(--gris-oscuro));
+    text-align: center;/* Centra el texto*/
+    padding: 22px 32px;/* Padding del contenido*/
+    font-size: 0.88rem;/* Tamaño del texto*/
+    letter-spacing: 0.5px;/* Espacio entre letras*/
+    border-top: 2px solid var(--rojo-principal);/* Borde superior*/
+    margin-top: auto;/* Margen superior*/
+}
+
+.footer, .footer p {
+    color: white;
+}
